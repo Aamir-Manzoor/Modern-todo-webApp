@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
-import { tasksAction } from "../../../store/Tasks.store";
-import ModdalDirectory from "../../Utilities/ModalDirectory";
+import { tasksActions } from "../../../store/Tasks.store";
+import ModalDirectory from "../../Utilities/ModalDirectory";
 import ItemDirectory from "./ItemDirectory";
 
 
@@ -23,7 +23,7 @@ const ContentDirectories: React.FC<{ classActive: string }> = ({
     );
 
     if (directoryDoesNotExist) {
-      dispatch(tasksAction.createDirectory(newDirectoryName));
+      dispatch(tasksActions.createDirectory(newDirectoryName));
     }
   };
 
