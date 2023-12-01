@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ReactComponent as SvgX } from "../../assets/x.svg";
+// import { ReactComponent as SvgX } from "../../assets/x.svg";
 
 const ModalContent: React.FC<{
   children: React.ReactNode;
