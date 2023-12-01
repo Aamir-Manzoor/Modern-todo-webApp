@@ -17,13 +17,13 @@ const Directories: React.FC<{ classActive: string }> = ({ classActive }) => {
         }`}
       >
         <Arrow
-        className={`w-3 h-3 mr-2 rotate-90 transition ${
-            isDirectoriesOpen ? "rotate-180" : " "
+        className={`w-3 h-3 mr-2 rotate-180 transition ${
+            isDirectoriesOpen ? "" : "rotate-90 "
         }`}
         />
         Directories
       </button>
-      <div className={`isDirectoriesOpen ? "visible": "hidden"`}>
+      <div className={isDirectoriesOpen ? "visible": "hidden"}>
         <ContentDirectories classActive={classActive} />
       </div>
     </div>
