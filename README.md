@@ -1,6 +1,6 @@
 ## Demo
 👇👇👇<br/>
-<a href="https://webvave-todo.vercel.app/">WebVaVe ToDo</a><br/>
+<a href="">Modern ToDo WebApp</a><br/>
 👆👆👆
 # ToDo
 To-do list website made with React JS, Tailwind CSS, TypeScript and more.
@@ -61,7 +61,6 @@ start project
 ```
 npm start
 ```
-## Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.😊
+
  
 
