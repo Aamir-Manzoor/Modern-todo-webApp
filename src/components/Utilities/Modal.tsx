@@ -24,7 +24,7 @@ const ModalContent: React.FC<{
           className="absolute right-3 sm:right-4"
           onClick={onClose}
         >
-          <SvgX />
+          <SvgX/>
         </button>
         <h2 className="font-medium mb-5 text-lg md:text-2xl">{title}</h2>
         {children}

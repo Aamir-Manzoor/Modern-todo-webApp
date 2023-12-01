@@ -13,12 +13,12 @@ const Directories: React.FC<{ classActive: string }> = ({ classActive }) => {
       <button
         onClick={toggleDirectoriesOpen}
         className={`flex items-center w-full mx-4 mb-2 ${
-          isDirectoriesOpen ? "dark:text-slate-200" : ""
+          isDirectoriesOpen ? "dark:text-slate-200" : " "
         }`}
       >
         <Arrow
         className={`w-3 h-3 mr-2 rotate-90 transition ${
-            isDirectoriesOpen ? "rotate-180" : ""
+            isDirectoriesOpen ? "rotate-180" : " "
         }`}
         />
         Directories

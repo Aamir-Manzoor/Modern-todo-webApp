@@ -47,8 +47,7 @@ const ModalDirectory: React.FC<{
               value={newDirName}
               onChange={({ target }) => setNewDirName(target.value)}
               className={`inputStyles block w-full`}
-              onInput={({ currentTarget }) =>
-                checkDirNameExists(currentTarget.value)
+              onInput={({ currentTarget }) => checkDirNameExists(currentTarget.value)
               }
             />
             {errorDirectoryName && (
