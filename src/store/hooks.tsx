@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import {useDispatch, useSelector, TypedUseSelectorHook } from "react-redux"
 // @ts-ignore
 import type { RootState, AppDispatch} from "./index.tsx"

@@ -140,7 +140,7 @@ export const tasksMiddleware =
       tasksActions.createDirectory.match(action);
 
     const isADirectoryAction: boolean = action.type
-      .toLowercase()
+      .toLowerCase()
       .includes("directory");
 
     if (action.type.startsWith("tasks/") && !actionChangeOnlyDirectories) {

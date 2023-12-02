@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { ReactComponent as SvgX } from "../../assets/x.svg";
+import { ReactComponent as SvgX } from "../../assets/x.svg";
 
 const ModalContent: React.FC<{
   children: React.ReactNode;
@@ -24,11 +24,7 @@ const ModalContent: React.FC<{
           className="absolute right-3 sm:right-4"
           onClick={onClose}
         >
-          <div>
-            X
-            {/* <SvgX /> */}
-            </div>
-       
+          <SvgX />
         </button>
         <h2 className="font-medium mb-5 text-lg md:text-2xl">{title}</h2>
         {children}

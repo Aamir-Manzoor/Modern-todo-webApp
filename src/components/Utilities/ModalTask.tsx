@@ -183,7 +183,7 @@ const ModalCreateTask: React.FC<{
         <InputCheckbox
           isChecked={isCompleted}
           setChecked={setIsCompleted}
-          label="Mark as important"
+          label="Mark as completed"
         />
 
         <button type="submit" className="btn mt-5">

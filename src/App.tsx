@@ -1,20 +1,42 @@
-import React from 'react'
-import Menu from "./components/Menu/Menu"
-import TasksSection from "./components/TasksSection/TasksSection"
-import AccountData from "./components/AccountData/AccountData"
+import React from "react";
+import Menu from "./components/Menu/Menu";
+import TasksSection from "./components/TasksSection/TasksSection";
+import AccountData from "./components/AccountData/AccountData";
+import { useAppDispatch, useAppSelector } from "./store/hooks";
+import { modalActions } from "./store/Modal.store";
+import { tasksActions } from "./store/Tasks.store";
+import ModalCreateTask from "./components/Utilities/ModalTask";
+import { Task } from "./interfaces";
+
 const App: React.FC = () => {
+  const modal = useAppSelector((state) => state.modal);
+
+  const dispatch = useAppDispatch();
+
+  const closeModalCreateTask = () => {
+    dispatch(modalActions.closeModalCreateTask());
+  };
+
+  const createNewTaskHandler = (task: Task) => {
+    dispatch(tasksActions.addNewTask(task));
+  };
+
   return (
     <div>
-    <div className='bg-slate-200 min-h-screen text-slate-600 dark:bg-slate-900 dark:text-slate-400 xl:text-base sm:text text-xs'>
-        {
-          
-        }
-        <Menu/>
-        <TasksSection/>
-        <AccountData/>
+      <div className="bg-slate-200 min-h-screen text-slate-600 dark:bg-slate-900 dark:text-slate-400 xl:text-base sm:text text-xs">
+        {modal.modalCreateTaskOpen && (
+          <ModalCreateTask
+            onClose={closeModalCreateTask}
+            nameForm="Add a task"
+            onConfirm={createNewTaskHandler}
+          />
+        )}
+        <Menu />
+        <TasksSection />
+        <AccountData />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
 export default App;
