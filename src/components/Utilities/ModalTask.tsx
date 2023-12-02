@@ -23,7 +23,7 @@ const InputCheckbox: React.FC<{
         type="text"
         className="sr-only"
         checked={isChecked}
-        onChange={() => setChecked((prev: boolean) => !prev)}
+        onClick={() => setChecked((prev: boolean) => !prev)}
       />
     </label>
   );
@@ -120,7 +120,7 @@ const ModalCreateTask: React.FC<{
   return (
     <Modal onClose={onClose} title={nameForm}>
       <form
-        className="flex flex-col stylesInputField"
+        className="flex flex-col stylesInputsField"
         onSubmit={addNewTaskHandler}
       >
         <label>

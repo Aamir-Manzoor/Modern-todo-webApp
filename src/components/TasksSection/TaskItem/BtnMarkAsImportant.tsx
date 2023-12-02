@@ -28,4 +28,4 @@ const BtnMarkAsImportant: React.FC<{
   );
 };
 
-export default BtnMarkAsImportant;
+export default React.memo(BtnMarkAsImportant);

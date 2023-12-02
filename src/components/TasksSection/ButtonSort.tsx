@@ -23,7 +23,7 @@ const ButtonSort: React.FC<{
       </button>
 
       <button onClick={() => setIsListInView1(false)} title="view in grid">
-        <IconView2 className={isListInView1 ? "text-violet-600" : ""} />
+        <IconView2 className={isListInView1 ? "" : "text-violet-600"} />
       </button>
       <select
         className="ml-auto inputStyles"

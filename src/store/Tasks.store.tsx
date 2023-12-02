@@ -72,7 +72,7 @@ const tasksSlice = createSlice({
     },
     markAsImportant(state, action: PayloadAction<string>) {
       const newTaskFavorited = state.tasks.find(
-        (task) => task.id !== action.payload
+        (task) => task.id === action.payload
       );
       newTaskFavorited!.important = !newTaskFavorited!.important;
     },
