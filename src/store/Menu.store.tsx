@@ -5,7 +5,7 @@ const initialState = {
   menuAccountOpened: false,
 };
 
-const menuSlice = createSlice({
+const menusSlice = createSlice({
   name: "modal",
   initialState: initialState,
   reducers: {
@@ -24,5 +24,5 @@ const menuSlice = createSlice({
   },
 });
 
-export const menuActions = menuSlice.actions;
-export default menuSlice.reducer;
+export const menusActions = menusSlice.actions;
+export default menusSlice.reducer;

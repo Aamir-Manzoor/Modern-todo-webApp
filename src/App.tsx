@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./components/Menu/Menu";
 import TasksSection from "./components/TasksSection/TasksSection";
-import AccountData from "./components/AccountData/AccountData";
+import AccountData from "./components/AccountSection/AccountData";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { modalActions } from "./store/Modal.store";
 import { tasksActions } from "./store/Tasks.store";
