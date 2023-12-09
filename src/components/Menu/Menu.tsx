@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { menuActions } from "../../store/Menu.store";
+import { menusActions } from "../../store/Menu.store";
 import BtnAddTask from "../Utilities/BtnAddTask";
 import Directories from '../Menu/Directories/Directories'
 import NavLinks from './NavLinks';
@@ -15,7 +15,7 @@ const Menu: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const closeMenuHandler = () => {
-    dispatch(menuActions.closeMenuHeader());
+    dispatch(menusActions.closeMenuHeader());
   };
   return (
     <div>
