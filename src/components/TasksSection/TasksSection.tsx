@@ -5,7 +5,8 @@ import HeaderTasks from "./HeaderTasks";
 import TodaysTasks from "../Routes/TodaysTasks";
 import ImportantTasks from "../Routes/ImportantTasks";
 import DoneTasks from "../Routes/DoneTasks";
-import SearchResults from "../Routes/SearchResults"
+import SearchResults from "../Routes/SearchResults";
+import Directory from "../Routes/Directory"
 
 const TasksSection: React.FC = () => {
   return (
@@ -24,6 +25,8 @@ const TasksSection: React.FC = () => {
           element={<DoneTasks done={false} title="Uncompleted tasks" />}
         />
         <Route path="/results" element={<SearchResults />} />
+        <Route path="/dir:/:dir" element={<Directory />} />
+
       </Routes>
     </main>
   );
