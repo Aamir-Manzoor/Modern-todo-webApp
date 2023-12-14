@@ -1,12 +1,12 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import Home from "../Routes/Home";
 import HeaderTasks from "./HeaderTasks";
 import TodaysTasks from "../Routes/TodaysTasks";
 import ImportantTasks from "../Routes/ImportantTasks";
 import DoneTasks from "../Routes/DoneTasks";
 import SearchResults from "../Routes/SearchResults";
-import Directory from "../Routes/Directory"
+import Directory from "../Routes/Directory";
 
 const TasksSection: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const TasksSection: React.FC = () => {
         />
         <Route path="/results" element={<SearchResults />} />
         <Route path="/dir:/:dir" element={<Directory />} />
-
+        <Route path="*" element={<Navigate to="" />} />
       </Routes>
     </main>
   );
