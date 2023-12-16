@@ -1,14 +1,12 @@
 ## Demo
 👇👇👇<br/>
-<a href="">Modern ToDo WebApp</a><br/>
+<a href="https://modern-todo-web-app.vercel.app/">Modern ToDo WebApp</a><br/>
 👆👆👆
 # ToDo
 To-do list website made with React JS, Tailwind CSS, TypeScript and more.
 ![page](https://webvave.ir/temp/todo/1.png)
 
 ![Add New](https://webvave.ir/temp/todo/2.png)
-
-![GameCenter](https://webvave.ir/temp/todo/3.png)
 
 Light mode:
 ![LightMod](https://webvave.ir/temp/todo/4.png)
@@ -35,11 +33,7 @@ The project mainly aimed to put into practice knowledge of TypeScript, Tailwind,
 - React Router DOM
 - HTML
 - Api
-- Weather
-- Game
 - Figma
-
-
 
 ## How to Run
 
