@@ -1,16 +1,15 @@
 import React from "react";
-import useTodayTasks from "../hooks/useTodayTasks";
 import { useAppSelector } from "../../store/hooks";
 import useCompletedTasks from "../hooks/useCompletedTasks";
+import useTodayTasks from "../hooks/useTodayTasks";
 
 const TasksDone: React.FC = () => {
   const todaysTasks = useTodayTasks();
   const tasks = useAppSelector((state) => state.tasks.tasks);
   const { tasks: todayTasksDone } = useCompletedTasks({
-    tasks: tasks,
+    tasks: todaysTasks,
     done: true,
   });
-
   const { tasks: allTasksDone } = useCompletedTasks({
     tasks: tasks,
     done: true,
@@ -28,28 +27,27 @@ const TasksDone: React.FC = () => {
   return (
     <>
       <div className="hidden lg:block">
-        {todaysTasks.length !== 0 && (
-          <div className="mb-8">
-            <span className="flex justify-between mb-5">
-              <span>Tasks Today</span>
-              {todayTasksDone.length}/{todaysTasks.length}
-            </span>
-            <div className="barProgress">
-              <div style={{ width: percentageTodayTasks + "%" }}></div>
-            </div>
+      {todaysTasks.length !== 0 && (
+        <div className="mb-8" >
+          <span className="flex justify-between mb-5">
+            <span>Tasks today</span> {todayTasksDone.length}/
+            {todaysTasks.length}
+          </span>
+          <div className="barProgress">
+            <div style={{ width: percentageTodayTasks + "%" }}></div>
           </div>
-        )}
-        {tasks.length !== 0 && (
-          <div className="">
-            <span className="flex justify-between mb-2">
-              <span className="mr-28">All tasks</span>
-              {allTasksDone.length}/{tasks.length}
-            </span>
-            <div className="barProgress">
-              <div style={{ width: percentageAllTasks + "%" }}></div>
-            </div>
+        </div>
+      )}
+      {tasks.length !== 0 && (
+        <div className="">
+          <span className="flex justify-between mb-2">
+            <span className="mr-28">All tasks </span> {allTasksDone.length}/{tasks.length}
+          </span>
+          <div className="barProgress">
+            <div style={{ width: percentageAllTasks + "%" }}></div>
           </div>
-        )}
+        </div>
+      )}
       </div>
     </>
   );
