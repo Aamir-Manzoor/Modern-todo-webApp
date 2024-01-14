@@ -1,14 +1,13 @@
 import {ApiWeather} from "./Api";
 import React, {useEffect, useState} from "react";
 import "./Weather.css";
-import {AlertBlock} from "./AlertBlock";
-import { Condition, If, Else, ElseIf } from "../components/Service/condition";
+
 import AirIcon from '@mui/icons-material/Air';
 import moment from "moment/moment";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-import DangerousIcon from '@mui/icons-material/Dangerous';
+
 import WeatherBlock from "./WeatherBlock";
 export default function Weather() {
     const [state, setState] = useState({

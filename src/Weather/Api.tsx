@@ -5,7 +5,7 @@ async function ApiWeather() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'e9599cefeamshbc7374c5a4657fap1ee92fjsn276533db2cd3',
+                'X-RapidAPI-Key': 'Add_kEy',
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
